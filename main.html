@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Notes Sharing</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <h1>Student Notes Sharing Platform</h1>
+        <select id="branchSelector" onchange="changeTheme()">
+            <option value="default">Select Branch</option>
+            <option value="cse">Computer Science</option>
+            <option value="ece">Electronics</option>
+            <option value="mech">Mechanical</option>
+        </select>
+    </header>
+    <main>
+        <section id="uploadSection">
+            <h2>Upload Your Notes</h2>
+            <form id="uploadForm">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes"></textarea>
+                <label for="file">Upload PDF:</label>
+                <input type="file" id="file" name="file" accept="application/pdf" required>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+        <section id="notesSection">
+            <h2>Shared Notes</h2>
+            <div id="notesContainer"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
